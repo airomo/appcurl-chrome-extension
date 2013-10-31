@@ -3,19 +3,20 @@
     "name": "Appcurl",
     "description": "Appcurl search engine",
     "version": "1",
-    "app": {
-        "urls": [
-            "*://appcurl.com",
-            "*://www.appcurl.com"
-        ],
-        "launch": {
-            "web_url": "http://appcurl.com"
-        }
-    },
     "icons": {
-        "128": "128x128.png",
-        "48": "48x48.png",
-        "32": "32x32.png",
-        "16": "16x16.png"
+        "128": "128x.png",
+        "48": "48x.png",
+        "32": "32x.png",
+        "16": "16x.png"
+    },
+    "permissions": [
+        "tabs",
+        "http://dev.tadatuta.com/*",
+        "<all_urls>"
+    ],
+    "background": { "scripts": ["main.js"] },
+    "browser_action": {
+        "default_title": "Appcurl : Discover awesome iOS and Android apps",
+        "default_icon" : "./16x.png"
     }
 }

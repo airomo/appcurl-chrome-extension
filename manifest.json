@@ -1,21 +1,17 @@
 {
-    "manifest_version": 2,
-    "name": "Appcurl",
-    "description": "Appcurl search engine",
-    "version": "1",
-    "app": {
-        "urls": [
-            "*://appcurl.com",
-            "*://www.appcurl.com"
-        ],
-        "launch": {
-            "web_url": "http://appcurl.com"
-        }
-    },
-    "icons": {
-        "128": "128x128.png",
-        "48": "48x48.png",
-        "32": "32x32.png",
-        "16": "16x16.png"
-    }
+  "manifest_version": 2,
+
+  "name": "Airomo: Got Apps?",
+  "version": "0.1",
+  "description": "Get contextually relevant mobile apps.",
+  "icons": { "128": "icon_128.png" },
+  "background": {
+    "persistent": false,
+    "scripts": ["bg.js"]
+  },
+  "permissions": ["tabs", "http://static.airomo.com/"],
+  "browser_action": {
+    "default_title": "Get contexually relevant mobile apps.",
+    "default_icon": "icon_19.png"
+  }
 }

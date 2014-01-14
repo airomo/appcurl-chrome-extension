@@ -2,6 +2,7 @@ chrome.browserAction.onClicked.addListener(function() {
 	chrome.tabs.query({active: true, currentWindow: true}, function(arrayOfTabs) {
 		var activeTab = arrayOfTabs[0];
 		var urlForSearch = activeTab.url;
+		var searchPage = 'http://static.airomo.com/widgets/search/results.html';
 
 		var isUrlValid = function( url ) {
 			var urlChecker = /http|https:+/;//TODO: put url RE
@@ -9,7 +10,7 @@ chrome.browserAction.onClicked.addListener(function() {
 		};
 
 		var detectOwnDomains = function( url ) {
-			return url.indexOf('http://static.airomo.com/widgets/search/results.html') != -1;
+			return url.indexOf( searchPage ) != -1;
 		};
 
 		if( detectOwnDomains( urlForSearch ) ) {
@@ -18,7 +19,7 @@ chrome.browserAction.onClicked.addListener(function() {
 			if( !isUrlValid( urlForSearch ) ) {
 				urlForSearch = 'airomo';
 			}
-			window.open("http://static.airomo.com/widgets/search/results.html?q="+urlForSearch);
+			window.open( searchPage + '?q=' + urlForSearch);
 		}
 	});
 });

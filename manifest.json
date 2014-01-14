@@ -2,7 +2,7 @@
   "manifest_version": 2,
 
   "name": "Airomo: Got Apps?",
-  "version": "0.1",
+  "version": "0.1.2",
   "description": "Get contextually relevant mobile apps.",
   "icons": { "128": "icon_128.png" },
   "background": {
